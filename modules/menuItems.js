@@ -552,21 +552,21 @@ let menuTempl = function(webviews) {
   });
 
   // Light mode switch should appear when not in Solo Mode (dev network)
-  if (
-    ethereumNode.isOwnNode &&
-    ethereumNode.isGesn &&
-    !ethereumNode.isDevNetwork
-  ) {
-    devToolsMenu.push({
-      label: 'Sync with Light client (beta)',
-      enabled: true,
-      checked: ethereumNode.isLightMode,
-      type: 'checkbox',
-      click() {
-        restartNode('gesn', null, ethereumNode.isLightMode ? 'fast' : 'light');
-      }
-    });
-  }
+  // if (
+  //   ethereumNode.isOwnNode &&
+  //   ethereumNode.isGesn &&
+  //   !ethereumNode.isDevNetwork
+  // ) {
+  //   devToolsMenu.push({
+  //     label: 'Sync with Light client (beta)',
+  //     enabled: true,
+  //     checked: ethereumNode.isLightMode,
+  //     type: 'checkbox',
+  //     click() {
+  //       restartNode('gesn', null, ethereumNode.isLightMode ? 'fast' : 'light');
+  //     }
+  //   });
+  // }
 
   // Enables mining menu: only in Solo mode and Ropsten network (testnet)
   if (
@@ -674,9 +674,21 @@ let menuTempl = function(webviews) {
       }
     },
     {
-      label: i18n.t('mist.applicationMenu.help.gitter'),
+      label: i18n.t('mist.applicationMenu.help.discord'),
       click() {
-        shell.openExternal('https://gitter.im/ethersocial/mist');
+        shell.openExternal('https://discord.gg/rVzc4aV');
+      }
+    },
+    {
+      label: i18n.t('mist.applicationMenu.help.reddit'),
+      click() {
+        shell.openExternal('https://www.reddit.com/r/ethersocial');
+      }
+    },
+    {
+      label: i18n.t('mist.applicationMenu.help.ddengle'),
+      click() {
+        shell.openExternal('https://www.ddengle.com');
       }
     },
     {

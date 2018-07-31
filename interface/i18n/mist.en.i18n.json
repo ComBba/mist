@@ -81,8 +81,9 @@
             },
             "help": {
                 "label": "Help",
-                "mistWiki": "Troubleshooting and Help",
-                "gitter": "Mist channel on Gitter",
+                "discord": "Discord",
+                "reddit": "Reddit",
+                "ddengle": "DDENGLE",
                 "reportBug": "Report an issue on Github"
             }
         },
